@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+       include partials/header
+    body
+
+            header.header#header
+                .header-principal.contenedor
+                    a(href="/")
+                        img.logo(src="img/logo.png")
+                    button.mobile-menu(type="button")
+                        span.br-1
+                        span.br-2 
+                        span.br-3 
+                    nav#navegacion.navegacion
+                        a(href="/") Inicio
+                        a(href="/productos") Productos
+                        //- a(href="/blog") Blog
+                        a(href="/comentarios") Comentarios
+            
+
+            block contenido
+    
+    footer.footer   
+        p.texto-footer.contenedor &copy; Empoderamiento Económico de la Mujer 
+
+        
+
+        
+
+        
+
+    

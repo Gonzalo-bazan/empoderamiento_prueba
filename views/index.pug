@@ -1,0 +1,45 @@
+extends layout
+
+block contenido
+    main.contenido-principal.contenedor
+        h2.titulo-principal.elemento-principal Empoderamiento #[span Económico] de la Mujer
+        img.imagen-principal.elemento-principal(src="/img/empoderamiento.jpg", alt="Imagen")
+
+    .ver-contenedor.contenedor    
+        .boton
+            i.ver-mas-boton(class="fas fa-chevron-down")
+
+    
+    .desafios-contenedor.contenedor
+        h2.titulo-desafio DESAFIOS
+            .desafios
+                .item-desafio.item-1
+                    .texto-item.texto-1
+                        h3 Discriminación Laboral
+                        .boton-item
+                            a.boton-naranja(href="/cv-anonimo" target="_blank") Ver Producto
+                    .imagen-item.imagen-1  
+                        img(src="/img/discriminacion.jpg", alt="")
+                    
+                .item-desafio
+                    .texto-item.texto-2
+                        h3 Cultura Machista
+                        .boton-item
+                            a.boton-naranja(href="/networking" target="_blank") Ver Producto
+                    .imagen-item.imagen-2
+                        img(src="/img/machista.jpg", alt="")
+                .item-desafio.item-3
+                    .texto-item.texto-3
+                        h3 Educación sin Enfoque de Género
+                        .boton-item
+                            a.boton-naranja(href="/plataforma-interactiva" target="_blank") Ver Producto
+                    .imagen-item.imagen-3   
+                        img(src="/img/enfoque-genero.jpg", alt="")
+                .item-desafio.item-5
+                    .texto-item.texto-4
+                        h3 Gestión Pública
+                        .boton-item
+                            a.boton-naranja(href="test-interactivo" target="_blank") Ver Producto
+                    .imagen-item.imagen-4    
+                        img(src="/img/gestion.jpg", alt="")
+        
