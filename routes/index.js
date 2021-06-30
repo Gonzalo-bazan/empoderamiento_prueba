@@ -5,6 +5,7 @@ const router = express.Router();
 //Controladores
 
 const principalController = require('../controllers/principalController');
+const anonimoController = require('../controllers/anonimoController');
 
 
 
@@ -22,6 +23,10 @@ module.exports=function(){
     // router.get('/blog',principalController.blog_home);
 
     // router.get('/comentarios',principalController.)
+
+    // CV ANONIMO
+
+    router.get('/cv-anonimo',anonimoController.home_anonimo);
 
     return router;
 }

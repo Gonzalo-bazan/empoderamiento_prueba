@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+       include partials/header-cv
+    body
+
+        header.header.contenedor
+            .logo
+                a(href="/cv-anonimo") ANONYMUS CV
+
+            .navegacion 
+                a(href="#") Sobre Nosotros
+                a(href="#") Empleos
+                a(href="#") Empresas 
+            .navegacion-ingreso 
+                a.iniciar-sesion(href="#") Iniciar Sesión
+                a.registrate(href="#") Registrate
+            button.ham-cv(type="button")
+                span.br-1-cv
+                span.br-2-cv
+                span.br-3-cv
+            
+    block contenido 
+    

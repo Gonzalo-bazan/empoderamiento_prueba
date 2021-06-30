@@ -1,9 +1,12 @@
 const Comentarios = require('../models/Comentarios');
 
 
-exports.home=(req,res)=>{
+exports.home=async (req,res)=>{
+
+    const comentarios = await Comentarios.findAll();
     res.render('index',{
-        nombrePagina:'Empoderamiento Económico de la Mujer'
+        nombrePagina:'Empoderamiento Económico de la Mujer',
+        comentarios
     })
 };
 
@@ -70,5 +73,7 @@ exports.enviar_comentario=async(req,res)=>{
     const comentario = req.body.comentario;
 
     await Comentarios.create({ nombre, apellidoPaterno, apellidoMaterno, producto, comentario });
+    // res.status(200).send('Comentario enviado correctamente');
     res.redirect('/comentarios');
+    
 }

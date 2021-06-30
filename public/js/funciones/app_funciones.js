@@ -5,10 +5,14 @@ export const mobileMenu=()=>{
     const navegacion = document.querySelector('.navegacion');
     const barras = document.querySelectorAll('.mobile-menu span');
 
-    mobileMenu.addEventListener('click',()=>{
-        navegacion.classList.toggle('activado');
-        barras.forEach(child=>{child.classList.toggle('animado')});
-    });
+    if(mobileMenu){
+        mobileMenu.addEventListener('click',()=>{
+            navegacion.classList.toggle('activado');
+            barras.forEach(child=>{child.classList.toggle('animado')});
+        });
+    }
+
+    
 }
 
 export const tarjetas=()=>{
@@ -73,7 +77,13 @@ export const navegacionFija=()=>{
         
     });
 
-    observer.observe(document.querySelector('.contenido-principal'));
+    const contenidoPrincipal = document.querySelector('.contenido-principal');
+
+    if(contenidoPrincipal){
+        observer.observe(document.querySelector('.contenido-principal'));
+    }
+
+    
     
 }
 
@@ -117,5 +127,22 @@ export const irAbajo=()=>{
     }
 
     
+}
+
+export const navegacionFija3=()=>{
+    const ham = document.querySelector('.ham-cv');
+    const nav1 = document.querySelector('.navegacion');
+    const nav2 = document.querySelector('.navegacion-ingreso');
+    const barras = document.querySelectorAll('.ham-cv span');
+    const body = document.querySelector('body');
+
+    if(ham){
+        ham.addEventListener('click',()=>{
+            nav1.classList.toggle('activado');
+            nav2.classList.toggle('activado');
+            barras.forEach(child=>{child.classList.toggle('animado')});
+            body.classList.toggle('hidden');
+        })
+    }
 }
 

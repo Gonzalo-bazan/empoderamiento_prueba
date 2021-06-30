@@ -42,4 +42,16 @@ block contenido
                             a.boton-naranja(href="test-interactivo" target="_blank") Ver Producto
                     .imagen-item.imagen-4    
                         img(src="/img/gestion.jpg", alt="")
+
+        section.seccion-comentarios.contenedor
+            h2.titulo-comentarios Opiniones Sobre Nuestros Productos
+
+            .comentarios
+                each comentario in comentarios
+                    .comentario-mostrar
+                        h3.comentario-titulo #[i #{comentario.producto}]
+                        p.comentario-persona Escrito por: #[span #{comentario.nombre} #{comentario.apellidoPaterno} #{comentario.apellidoMaterno}]
+                        p.comentario-texto #{comentario.comentario}
+                
+                
         

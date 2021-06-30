@@ -9,12 +9,12 @@ block contenido
             fieldset
                 legend Información General
                 label.label-nombre(for="nombre") Nombre
-                input(type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required)
+                input.input-nombre(type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required)
 
                 label(for="apellidoPaterno") Apellido Paterno
                 input(type="text" id="apellidoPaterno" name="apellidoPaterno" placeholder="Apellido Paterno" required)
 
-                label(for="apellidoMaterno") Apellido Paterno 
+                label(for="apellidoMaterno") Apellido Materno 
                 input(type="text" id="apellidoMaterno" name="apellidoMaterno" placeholder="Apellido Materno" required)
 
                 label(for="producto") Producto 
@@ -28,7 +28,7 @@ block contenido
                 label(for="comentario") Comentario 
                 textarea(name="comentario" id="comentario" required) 
             
-            input.boton-comentario.boton-naranja(type="submit" value="Enviar")
+            input.boton-comentario.boton-naranja#boton-comentario(type="submit" value="Enviar")
 
                 
         

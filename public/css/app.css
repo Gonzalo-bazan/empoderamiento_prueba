@@ -459,6 +459,57 @@ img{
     }
 }
 
+/* --------------------------------------- Seccion Comentarios INDEX ------------------------------------------------------------------*/
+
+
+.seccion-comentarios{
+    margin-top: 8rem;
+}
+
+.titulo-comentarios{
+    text-align: center;
+
+}
+
+.comentarios{
+    background-color: rgb(243, 242, 242);
+    margin-top: 4rem;
+    
+}
+
+.comentario-titulo{
+    padding: 0.5rem 2rem 0 2rem;
+}
+.comentario-texto{
+    padding: 0.5rem 2rem 1rem 2rem;
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+.comentario-persona{
+    padding: 0 2rem;
+    /* color: blue; */
+    /* margin-top: 0; */
+}
+
+.comentario-persona span{
+    color: rgb(113, 113, 153);
+    font-weight: 700;
+    text-align: justify;
+    
+}
+
+.comentario-mostrar{
+    border-bottom: solid 1px #858484;
+    /* width: 95%; */
+    /* align-items: center;
+    text-align: center; */
+}
+
+.comentario-mostrar:last-child{
+    border-bottom: none;
+}
+
 /* ---------------------------------------------------------Footer--------------------------------------------------------------------- */
 
 .footer{
@@ -468,11 +519,18 @@ img{
 
 .texto-footer{
 
-    
     padding: 5rem;
+    line-height: 4rem;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
+}
+
+@media(min-width:830px){
+
+    .texto-footer{
+        font-size: 2.5rem;
+    }
 }
 
 
