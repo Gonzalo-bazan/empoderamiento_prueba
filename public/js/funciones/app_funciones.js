@@ -146,3 +146,17 @@ export const navegacionFija3=()=>{
     }
 }
 
+export const desplegarPasos=()=>{
+    const botonDesplegable = document.querySelector('.boton-desplegable');
+    const pasos = document.querySelector('.pasos');
+    const animado = document.querySelector('.boton-desplegable i');
+
+    if(botonDesplegable){
+        botonDesplegable.addEventListener('click',()=>{
+            pasos.classList.toggle('mostrar');
+            animado.classList.toggle('animado');
+        })
+    }
+
+}
+

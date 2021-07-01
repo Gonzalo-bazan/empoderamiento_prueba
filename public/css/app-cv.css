@@ -131,7 +131,7 @@ img{
 /* seccion principal */
 
 .contenido-principal{
-    margin-top: 5rem;
+    margin-top: 1rem;
     background-color: #151770;
 }
 
@@ -446,6 +446,128 @@ img{
     .funcionamiento .etapa{
         margin-bottom: 0;
     }
+}
+
+/*------------------------------------USO----------------------------------------------------------------------*/
+
+.titulo-uso{
+    text-align: center;
+    font-size: 2.8rem;
+    color: #151770;
+}
+
+.texto-uso{
+    text-align: center;
+    font-size: 1.9rem;
+    /* display: n; */
+}
+
+.pasos{
+    margin-top: 4rem;
+    /* padding: 0 5rem; */
+    /* text-align: center; */
+    display: none;
+    animation: ocultaMenu 1s ease both;
+}
+
+/* .paso{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+} */
+
+.boton-desplegable i{
+    font-size: 3rem;
+    /* transform: rotate(180deg); */
+
+}
+
+.animado{
+    transform: rotate(180deg);
+}
+
+.boton-desplegable:hover{
+    cursor: pointer;
+
+}
+
+.boton-pasos{
+    text-align: center;
+    margin-top: 4rem;
+    /* border
+    background-color: transparent; */
+}
+
+.mostrar{
+    display: block;
+}
+
+.texto-paso{
+    line-height: 3.4rem;
+}
+
+.texto-paso span{
+    background-color: #151770;
+    border-radius: 60%;
+    padding: 1rem;
+    color: white;
+    font-weight: 500;
+    font-size: 2.2rem;
+    margin-right: 2rem;
+    /* line-height: 3rem; */
+}
+
+.titulo-pasos{
+    text-align: center;
+    font-size: 2.2rem;
+    color: #151770;
+}
+
+.paso{
+    padding: 0 5rem;
+    margin-top: 4rem;
+}
+
+@media(min-width:830px){
+    .paso{
+        padding: 0 20rem;
+    }
+    
+}
+
+.pasos.mostrar{
+    display: flex;
+    animation: muestraMenu 0.3s ease-in-out both;
+}
+
+@keyframes muestraMenu{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes ocultaMenu{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+
+
+/*----------------------------------------------------- Footer ---------------------------------------------------*/
+
+.footer{
+    border-top: solid 1px rgb(170, 167, 167);
+}
+
+.contenido-footer{
+    text-align: center;
+}
+
+.texto-footer{
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(62, 50, 139);
+    font-size: 3rem;
+    padding: 1rem 0;
+    margin: 0;
 }
 
 
