@@ -1,0 +1,21 @@
+extends ../layout-cv 
+
+block contenido 
+
+    h1.titulo-iniciar.inicio-sesion Inciar Sesión
+    
+    .contenedor
+        .contenedor-formulario.contenedor-inicio
+            
+            
+            form#formulario.caja.caja-login(method="POST" action="/cv-anonimo/iniciar-sesion")
+                .campo
+                    label(for="email") E-mail:
+                    input(type="email" name ="email" placeholder="Tu Email" required )
+                .campo
+                    label(for="password") Password:
+                    input(type="password" name ="password" placeholder="Tu Password" required)
+                .campo.enviar
+                    input.boton(type="submit" value="Iniciar Sesion")
+                .campo
+                    a(href="/cv-anonimo/registrar") Crear Cuenta

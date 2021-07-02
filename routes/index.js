@@ -28,6 +28,16 @@ module.exports=function(){
 
     router.get('/cv-anonimo',anonimoController.home_anonimo);
 
+    router.get('/cv-anonimo/sobre-nosotros',anonimoController.nosotros_anonimo);
+
+    router.get('/cv-anonimo/empleos',anonimoController.empleos_anonimo);
+
+    router.get('/cv-anonimo/empresas',anonimoController.empresas_anonimo);
+
+    router.get('/cv-anonimo/iniciar-sesion',anonimoController.iniciar_anonimo);
+
+    router.get('/cv-anonimo/registrar',anonimoController.registrar_anonimo);
+
     return router;
 }
 

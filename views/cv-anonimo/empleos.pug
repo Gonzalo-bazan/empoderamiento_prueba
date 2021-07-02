@@ -1,0 +1,27 @@
+extends ../layout-cv
+
+block contenido
+
+    img.imagen-cv(src="../img/empleos-cv.jpg", alt="")
+    section.seccion-empleos 
+        .contenedor
+            h2 Empleos
+            .empleos-principal
+                .division-empleo
+                    i(class="fas fa-briefcase")
+                    .numeros-texto
+                        .numero.numero-empleos Más de #[span 00 ] empleos en todo el Perú
+                        //- p Empleos
+                .division-empleo
+                    i(class="far fa-building")
+                    .numeros-texto
+                        .numero.numero-empresas Más de #[span 00 ] empresas en todo el Perú
+                        //- p Empresas
+                .division-empleo
+                    i(class="fas fa-project-diagram")
+                    .numeros-texto
+                        p.numero.numero-rubros Más de #[span 00 ] rubros en donde trabajar
+                        //- p Rubros
+            
+            .boton-registrar
+                a.boton(href="/cv-anonimo/registrar") Registrate Gratis 

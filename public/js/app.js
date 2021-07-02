@@ -14,6 +14,8 @@ import {irAbajo} from "./funciones/app_funciones";
 
 import { desplegarPasos } from "./funciones/app_funciones";
 
+import { contador } from "./funciones/app_funciones";
+
 import {enviarComentario} from "./modulos/comentarios";
 
    
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     navegacionFija3();
     irAbajo();
     desplegarPasos();
+    contador();
     // enviarComentario();
 
     

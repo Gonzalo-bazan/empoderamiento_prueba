@@ -1,0 +1,30 @@
+extends ../layout-cv 
+
+block contenido 
+
+    h1.titulo-iniciar Registrate
+    
+    .contenedor
+        .contenedor-formulario
+            
+            
+            form#formulario.caja.caja-login(method="POST" action="/cv-anonimo/iniciar-sesion")
+                .campo 
+                    label(for="nombre") Nombre:
+                    input(type="text" name ="nombre" placeholder="Tu Nombre" required)
+                .campo 
+                    label(for="apellidoPaterno") Apellido Paterno:
+                    input(type="text" name ="apellidoPaterno" placeholder="Tu Apellido Paterno" required)
+                .campo 
+                    label(for="apellidoMaterno") Apellido Materno:
+                    input(type="text" name ="apellidoMaterno" placeholder="Tu Apellido Materno" required)
+                .campo
+                    label(for="email") E-mail:
+                    input(type="email" name ="email" placeholder="Tu Email" required)
+                .campo
+                    label(for="password") Password:
+                    input(type="password" name ="password" placeholder="Tu Password" required)
+                .campo.enviar
+                    input.boton(type="submit" value="Iniciar Sesion")
+                .campo
+                    a(href="/cv-anonimo/iniciar-sesion") Iniciar Sesión

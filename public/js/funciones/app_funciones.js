@@ -1,3 +1,4 @@
+
 import Swal  from "sweetalert2";
 
 export const mobileMenu=()=>{
@@ -158,5 +159,58 @@ export const desplegarPasos=()=>{
         })
     }
 
+}
+
+export const contador=()=>{
+    const numeroEmpleos = document.querySelector('.numero-empleos span');
+    const numeroEmpresas = document.querySelector('.numero-empresas span');
+    const numeroRubros = document.querySelector('.numero-rubros span');
+
+    let cantidad=0;
+    let cantidad2=0;
+    let cantidad3=0;
+
+    const formatoNumero = (number) => {
+        const exp = /(\d)(?=(\d{3})+(?!\d))/g;
+        const rep = '$1,';
+        let arr = number.toString().split('.');
+        arr[0] = arr[0].replace(exp,rep);
+        return arr[1] ? arr.join('.'): arr[0];
+      }
+
+    if(numeroEmpleos){
+
+        let tiempo = setInterval(()=>{
+            cantidad +=10
+            numeroEmpleos.textContent=formatoNumero(cantidad);
+    
+            if(cantidad===1200){
+                clearInterval(tiempo)
+            }
+        },35)
+    }
+
+    if(numeroRubros){
+        let tiempo = setInterval(()=>{
+            cantidad3 +=1
+            numeroRubros.textContent=formatoNumero(cantidad3);
+    
+            if(cantidad3===50){
+                clearInterval(tiempo)
+            }
+        },60)
+    }
+
+    if(numeroEmpresas){
+        let tiempo = setInterval(()=>{
+            cantidad2 +=10
+            numeroEmpresas.textContent=formatoNumero(cantidad2);
+    
+            if(cantidad2===300){
+                clearInterval(tiempo)
+            }
+        },70)
+    }
+    
 }
 
