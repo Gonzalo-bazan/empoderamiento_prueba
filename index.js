@@ -66,7 +66,9 @@ app.use((req,res,next)=>{
     next();
 });
 
+//Rutas
 
+app.use('/',routes());
 
 //Puerto
 
