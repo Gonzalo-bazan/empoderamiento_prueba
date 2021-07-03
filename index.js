@@ -2,8 +2,10 @@ const express = require('express');
 const routes = require('./routes');
 const path = require('path');
 const bodyParser = require('body-parser');
-//Variables
-require('dotenv').config({path: 'variables.env'})
+const flash = require('connect-flash');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const passport = require('./config/passport');
 
 //Conexión a la BBDD
 
@@ -11,6 +13,7 @@ const db = require('./config/db');
 
 //Modelos
 require('./models/Comentarios');
+require('./models/UsuariosCV');
 
 
 
@@ -37,10 +40,32 @@ app.use(bodyParser.urlencoded({extend: true}));
 
 app.set('views',path.join(__dirname,'./views'));
 
+//Agregar flash messages
 
-//Rutas
+app.use(flash());
 
-app.use('/',routes());
+app.use(cookieParser());
+//Sesiones nos permiten navegar entre distintas paginas sin volvernos a autenticar
+app.use(session({
+    secret:'supersecreto',
+    resave:false,
+    saveUninitialized:false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Pasar var dump a la aplicacion
+
+app.use((req,res,next)=>{
+    
+    // res.locals.vardump=helpers.vardump;
+    res.locals.mensajes=req.flash();
+    res.locals.usuario = {...req.user} || null;
+    
+    next();
+});
+
 
 
 //Puerto

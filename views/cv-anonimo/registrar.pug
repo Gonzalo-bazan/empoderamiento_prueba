@@ -6,9 +6,16 @@ block contenido
     
     .contenedor
         .contenedor-formulario
+
+            if locals.mensajes
+                .alertas
+                    each categoria in Object.keys(locals.mensajes)
+                        each error in mensajes[categoria]
+                            .alerta(class=`${categoria}`)
+                                p=error
             
             
-            form#formulario.caja.caja-login(method="POST" action="/cv-anonimo/iniciar-sesion")
+            form#formulario.caja.caja-login(method="POST" action="/cv-anonimo/registrar")
                 .campo 
                     label(for="nombre") Nombre:
                     input(type="text" name ="nombre" placeholder="Tu Nombre" required)
@@ -25,6 +32,6 @@ block contenido
                     label(for="password") Password:
                     input(type="password" name ="password" placeholder="Tu Password" required)
                 .campo.enviar
-                    input.boton(type="submit" value="Iniciar Sesion")
-                .campo
+                    input.boton(type="submit" value="Registrar")
+                .campo-boton
                     a(href="/cv-anonimo/iniciar-sesion") Iniciar Sesión

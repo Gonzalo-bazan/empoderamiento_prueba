@@ -7,6 +7,8 @@ const router = express.Router();
 const principalController = require('../controllers/principalController');
 const anonimoController = require('../controllers/anonimoController');
 
+const authController = require('../controllers/authController');
+
 
 
 module.exports=function(){
@@ -24,7 +26,7 @@ module.exports=function(){
 
     // router.get('/comentarios',principalController.)
 
-    // CV ANONIMO
+    //---------------- CV ANONIMO--------------------------------------
 
     router.get('/cv-anonimo',anonimoController.home_anonimo);
 
@@ -37,6 +39,24 @@ module.exports=function(){
     router.get('/cv-anonimo/iniciar-sesion',anonimoController.iniciar_anonimo);
 
     router.get('/cv-anonimo/registrar',anonimoController.registrar_anonimo);
+
+    //Registrar Usuario
+
+    router.post('/cv-anonimo/registrar',anonimoController.crearUsuario);
+
+    //Iniciar Sesion
+
+    router.post('/cv-anonimo/iniciar-sesion',authController.autenticarUsuario);
+
+    //Usuarios CV
+
+    router.get('/cv-anonimo/usuarios',
+    authController.usuarioAutenticado,
+    anonimoController.usuarios_cv);
+
+    //Cerrar Cesión
+
+    router.get('/cv-anonimo/cerrar-sesion',authController.cerrarSesion);
 
     return router;
 }

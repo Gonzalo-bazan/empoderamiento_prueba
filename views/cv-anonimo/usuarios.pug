@@ -1,0 +1,14 @@
+extends layout-usuarios
+
+block contenido 
+    .principal-derecha
+        .contenedor
+            h1.bienvenida-usuario Hola, #{nombre} #{apellidoPaterno} #{apellidoMaterno}
+
+            h2.instrucciones-usuario Instrucciones
+
+            .instrucciones 
+                .instruccion #[span 1.] Sube tu CV en la sección CV.
+                .instruccion #[span 2.] Busca empleos en la sección empleo y postula sin miedo a ser discriminado.
+                .instruccion #[span 3.] Verifica tu bandeja de entrada si es que alguna empresa está interesado en ti.
+                .instruccion #[span 4.] En caso de haber sido seleccionada o seleccionado, haremos un seguimiento a tu etapa post-contrato.
