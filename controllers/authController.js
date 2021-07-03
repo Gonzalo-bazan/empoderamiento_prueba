@@ -17,7 +17,7 @@ exports.usuarioAutenticado = (req,res,next)=>{
         return next();
     }
 
-    //Sino está autenticado, redigir al formulario  
+    //Sino está autenticado, redigir al formulario 
 
     return res.redirect('/cv-anonimo/iniciar-sesion');
 }
