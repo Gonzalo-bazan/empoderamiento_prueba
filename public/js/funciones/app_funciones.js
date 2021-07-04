@@ -218,17 +218,62 @@ export const contador=()=>{
 }
 
 export const preguntas=()=>{
+
+
+    //PREGUNTA 1
+    const pregunta1 = document.querySelector('.pregunta-1');
     const p1r1 = document.querySelector('.p1r1.respuesta');
     const video1 = document.querySelector('.video-1');
-
     const p1r2 = document.querySelector('.p1r2.respuesta');
     const video2 = document.querySelector('.video-2');
+    const rpta = document.querySelector('.rpta-1');
+
+    //PREGUNTA 2
+    const pregunta2 = document.querySelector('.pregunta-2');
+    const p2r1 = document.querySelector('.p2r1.respuesta');
+    const video3 = document.querySelector('.video-3');
+    const p2r2 = document.querySelector('.p2r2.respuesta');
+    const video4 = document.querySelector('.video-4');
+    const rpta2 = document.querySelector('.rpta-2');
+
+    const puntos = document.querySelector('.puntuacion');
+
+    let puntaje=0;
+
+    let añadirPuntos = 0;
+
+    let puntajeAnterior = 0;
+
+    const duracion = 150;
 
     if(p1r1){
         p1r1.addEventListener('click',()=>{
-            video1.classList.add('mostrar');
-            video2.classList.remove('mostrar');
+
             
+            video1.classList.add('mostrar');
+            // video2.classList.remove('mostrar');
+            // video3.classList.remove('mostrar');
+            // video4.classList.remove('mostrar');
+            p1r1.classList.add('ocultar');
+            p1r2.classList.add('ocultar');
+            pregunta2.classList.add('mostrar');
+
+
+            
+            rpta.classList.add('mostrar');
+
+            rpta.textContent = p1r1.textContent;
+            
+            let tiempo = setInterval(()=>{
+                añadirPuntos=11;
+                puntos.textContent = puntaje;
+                puntaje +=1;
+                if(puntaje===añadirPuntos){
+                    clearInterval(tiempo)
+                }
+            },duracion);
+            
+            puntajeAnterior = puntaje;
         })
     }
 
@@ -236,7 +281,84 @@ export const preguntas=()=>{
         p1r2.addEventListener('click',()=>{
             
             video2.classList.add('mostrar');
-            video1.classList.remove('mostrar');
+
+            p1r1.classList.add('ocultar');
+            p1r2.classList.add('ocultar');
+            pregunta2.classList.add('mostrar');
+
+
+            
+            rpta.classList.add('mostrar');
+
+            rpta.textContent = p1r2.textContent;
+            
+            let tiempo = setInterval(()=>{
+                añadirPuntos=6;
+                puntos.textContent = puntaje;
+                puntaje +=1;
+                if(puntaje===añadirPuntos){
+                    clearInterval(tiempo)
+                }
+            },duracion);
+            
+            puntajeAnterior = puntaje;
+            
+        })
+    }
+
+    if(p2r1){
+        p2r1.addEventListener('click',()=>{
+            
+            
+            video3.classList.add('mostrar');
+            p2r1.classList.add('ocultar');
+            p2r2.classList.add('ocultar');
+            pregunta1.classList.add('ocultar');
+            
+
+            rpta2.classList.add('mostrar');
+            rpta2.textContent = p2r1.textContent;
+
+            puntajeAnterior = puntaje + 10;
+
+            let tiempo = setInterval(()=>{
+                // añadirPuntos=11
+                // puntajeAnterior = puntaje + 11
+                puntos.textContent = puntaje;
+                puntaje +=1;
+                if(puntaje===puntajeAnterior){
+                    clearInterval(tiempo)
+                }
+            },duracion);
+
+
+        })
+    }
+
+    if(p2r2){
+        p2r2.addEventListener('click',()=>{
+            
+          
+            video4.classList.add('mostrar');
+            p2r1.classList.add('ocultar');
+            p2r2.classList.add('ocultar');
+            pregunta1.classList.add('ocultar');
+
+            rpta2.classList.add('mostrar');
+            rpta2.textContent = p2r2.textContent;
+
+            puntajeAnterior = puntaje + 5;
+
+            let tiempo = setInterval(()=>{
+                // añadirPuntos=11
+                // puntajeAnterior = puntaje + 11
+                puntos.textContent = puntaje;
+                puntaje +=1;
+                if(puntaje===puntajeAnterior){
+                    clearInterval(tiempo)
+                }
+            },duracion);
+
         })
     }
     

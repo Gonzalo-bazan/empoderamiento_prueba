@@ -17,16 +17,44 @@ html(lang="en")
                 .preguntas
                     h1 CUESTIONARIO
                     .contenedor
-                        .pregunta 
+                        .hud
+                            .puntaje
+                                .puntos
+                                    p Puntaje: 
+                                    .puntuacion-contenedor 
+                                        .puntuacion 00
+                                        i.moneda(class="fab fa-bitcoin")
+                                        
+                            .reiniciar 
+                                a(href="/plataforma-interactiva/preguntas") Reiniciar
+                        
+
+
+                    .contenedor.contenedor-preguntas
+                        .pregunta.pregunta-1 
                             p 1. ¿Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iusto dignissimos beatae officia?
                                 .respuestas.contenedor
-                                    p.p1r1.respuesta 1
-                                    p.respuesta.p1r2 2
+                                    p.p1r1.respuesta Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sunt, repellat quo autem dolorem atque quam cum adipisci tempora similique
+                                    p.respuesta.p1r2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur ea, dolorem nobis vero commodi corporis ad possimus ex voluptas
+                             
+                            p.rpta-1 
                             .videos
                                 .video-1
                                     iframe.video(width="560" height="315" src="https://www.youtube.com/embed/21qNxnCS8WU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
                                 .video-2
                                     iframe.video(width="560" height="315" src="https://www.youtube.com/embed/esX7SFtEjHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                        
+                        .pregunta.pregunta-2
+                            p 2. ¿Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias autem nam veniam? Sapiente tenetur doloremque fugit dignissimos illo odio?
+                                .respuestas.contenedor
+                                    p.p2r1.respuesta Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cumque eaque, perspiciatis, fugit atque officia
+                                     p.respuesta.p2r2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero optio dolorum inventore ipsa minus eius explicabo dicta
+                            p.rpta-2
+                            .videos
+                                .video-3
+                                    iframe(width="560" height="315" src="https://www.youtube.com/embed/UJthzYsva1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                                .video-4
+                                    iframe(width="560" height="315" src="https://www.youtube.com/embed/reLhTpKTuPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
                                 
                             
 
