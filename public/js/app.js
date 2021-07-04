@@ -2,7 +2,7 @@
 
 import { mobileMenu } from "./funciones/app_funciones";
 
-import { tarjetas } from "./funciones/app_funciones";
+
 
 import {navegacionFija} from "./funciones/app_funciones";
 
@@ -16,20 +16,26 @@ import { desplegarPasos } from "./funciones/app_funciones";
 
 import { contador } from "./funciones/app_funciones";
 
-import {enviarComentario} from "./modulos/comentarios";
+import { preguntas } from "./funciones/app_funciones";
+
+
 
    
 
 document.addEventListener('DOMContentLoaded',()=>{
+    
+
+    preguntas();
     mobileMenu();
-    // tarjetas();
+    
     navegacionFija();
     navegacionFija2();
     navegacionFija3();
     irAbajo();
     desplegarPasos();
     contador();
-    // enviarComentario();
+    
+    
 
     
 });

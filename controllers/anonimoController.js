@@ -88,3 +88,22 @@ exports.usuarios_cv=(req,res)=>{
         apellidoMaterno
     });
 }
+
+exports.mostrar_cv=(req,res)=>{
+    const usuarioId = res.locals.usuario.id;
+
+    const nombre = res.locals.usuario.nombre;
+
+    const apellidoPaterno = res.locals.usuario.apellidoPaterno;
+
+    const apellidoMaterno = res.locals.usuario.apellidoMaterno;
+
+
+
+    res.render('cv-anonimo/usuarios-cv',{
+        nombrePagina: 'CV Usuario',
+        nombre,
+        apellidoPaterno,
+        apellidoMaterno
+    });
+}

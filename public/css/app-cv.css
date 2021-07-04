@@ -645,7 +645,7 @@ img{
 }
 
 .boton-registrar a:hover{
-    box-shadow: inset 20rem 0 0 0 #000000;
+    box-shadow: inset 100% 0 0 0 #000000;
     cursor: pointer;
     color: #ffffff;
 }
@@ -811,6 +811,8 @@ img{
     background-color: #151770;
 }
 
+
+
 .contenido-header{
     display: flex;
     justify-content: space-between;
@@ -844,23 +846,26 @@ img{
 
 
 .panel-usuarios{
-    display: flex;
-    flex-direction: column ;
-    /* margin-top: 5rem; */
-    padding: 0 2rem;
-    width: 25rem;
-    /* max-width: 50rem; */
-    /* height: 100%; */
-    /* background-color: rgb(173, 169, 169); */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+    
 }
 
+
+
 .aside-principal{
+    display: flex;
+    flex-direction: column;
     background-color: rgb(173, 169, 169);
     /* max-width: 300px; */
     height: 100%;
     padding: 1rem;
     text-align: center;
+
 }
+
+
 
 .panel-usuarios a{
     margin-top: 5rem;
@@ -904,5 +909,6 @@ img{
 .instruccion{
     margin-top: 4rem;
     padding: 3rem;
-    color: white;   
+    color: white;
+    text-align: left;   
 }

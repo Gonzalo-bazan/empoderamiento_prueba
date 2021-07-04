@@ -14,20 +14,20 @@ html(lang="en")
 
                         //- a(href="#") Cerrar Sesión
 
-        main.principal-izquierda 
-            aside.aside-principal
-                .panel-usuarios
-                    a.opcion-usuarios#inicio(href="/cv-anonimo/usuarios")
-                        i(class="fas fa-home") #[span Inicio] 
-                    a.opcion-usuarios#cv(href="#") 
-                        i(class="far fa-file-alt") #[span CV]
-                    a.opcion-usuarios#empleos(href="#") 
-                        i(class="fas fa-briefcase") #[span Empleos]
-                    a.opcion-usuarios#bandeja(href="#")
-                        i(class="fas fa-envelope") #[span Bandeja de Entrada] 
-                    a.opcion-usuarios#cerrar(href="/cv-anonimo/cerrar-sesion")
-                        i(class="fas fa-power-off") #[span Cerrar Sesión]
+        //- main.principal-izquierda 
+        aside.aside-principal
+            .panel-usuarios
+                a.opcion-usuarios#inicio(href="/cv-anonimo/usuarios")
+                    i(class="fas fa-home") #[span Inicio] 
+                a.opcion-usuarios#cv(href="/cv-anonimo/usuarios-cv") 
+                    i(class="far fa-file-alt") #[span CV]
+                a.opcion-usuarios#empleos(href="#") 
+                    i(class="fas fa-briefcase") #[span Empleos]
+                a.opcion-usuarios#bandeja(href="#")
+                    i(class="fas fa-envelope") #[span Bandeja de Entrada] 
+                a.opcion-usuarios#cerrar(href="/cv-anonimo/cerrar-sesion")
+                    i(class="fas fa-power-off") #[span Cerrar Sesión]
 
-            block contenido
+        block contenido
 
 

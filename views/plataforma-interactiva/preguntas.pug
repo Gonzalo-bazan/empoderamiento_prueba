@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        include ../partials/header-plataforma
+    body
+
+        header.header-preguntas
+            .contenedor
+                .contenido-header
+                
+                    .logo.elemento-header
+                        a(href="/plataforma-interactiva") 
+                            img(src="../img/genero.png", alt="") 
+        
+        main.principal-preguntas
+            .contenedor 
+                .preguntas
+                    h1 CUESTIONARIO
+                    .contenedor
+                        .pregunta 
+                            p 1. ¿Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iusto dignissimos beatae officia?
+                                .respuestas.contenedor
+                                    p.p1r1.respuesta 1
+                                    p.respuesta.p1r2 2
+                            .videos
+                                .video-1
+                                    iframe.video(width="560" height="315" src="https://www.youtube.com/embed/21qNxnCS8WU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                                .video-2
+                                    iframe.video(width="560" height="315" src="https://www.youtube.com/embed/esX7SFtEjHg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+                                
+                            
+
+

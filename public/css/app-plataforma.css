@@ -1,0 +1,210 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+    
+
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background: url(../img/fondo-interactivo.png);
+    /* font-family: 'Otomanopee One', sans-serif; */
+    font-family: 'Roboto Mono', monospace;
+    animation: mostrar 1.5s ease-in both;
+    
+    /* background-position: auto; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+
+img{
+    width: 100%;
+}
+
+.header{
+    margin: 5rem 0;
+    height: 60vh;
+}
+
+
+
+.contenedor{
+    width: 95%;
+    max-width:120rem ;
+    margin: 0 auto;
+}
+
+
+.logo img{
+    width: 15rem;
+    /* border: solid 1px transparent; */
+    border-radius: 50%;
+}
+
+.titulo{
+    display: flex;
+    /* animation: mostrar 1s ease-in both; */
+    animation: mostrar 1s ease-in both;
+}
+
+
+
+.letras span{
+    /* display: flex; */
+    animation: mostrar 1.5s ease-in both;
+    color: white;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.letras span:hover{
+    cursor:default;
+    color: yellow;
+    animation: desplazar 0.1s ease-in-out both;
+    animation-direction: alternate-reverse;
+    /* transform: translateY(-2rem); */
+    /* transition: all 0.1s ease-in; */
+}
+
+
+
+@keyframes mostrar{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes desplazar{
+    from{transform: translateY(0px);}
+    to{transform: translateY(-20px);}
+}
+
+.barra button{
+    background-color: transparent;
+    border: none;
+}
+
+.barra{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ham-cv span{
+    display: block;
+    background-color:black;
+    height: 5px;
+    width: 28px;
+    margin: 8px auto;
+    border-radius: 2px;
+}
+
+.contenido-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.empezar{
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    font-size: 4rem;
+    background-color: yellow;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: inset 0 0 0 0 #000000;
+    transition: 0.4s ease-out;
+    outline: none;
+}
+
+.empezar:hover{
+    box-shadow: inset 35rem 0 0 0 #000000;
+    cursor: pointer;
+    color: #ffffff;
+    animation: desplazar 0.1s ease-in-out both;
+}
+
+.elemento-header{
+    margin-bottom: 12rem;
+}
+
+.elemento-header:last-child{
+    margin-bottom: 0;
+}
+
+.boton-empezar a{
+    text-decoration: none;
+}
+
+/*----------------------PREGUNTAS *-------------------------*/
+
+.preguntas{
+    margin-top: 5rem;
+}
+
+.pregunta p{
+    font-size: 1.8rem;
+    color: white;
+}
+
+.pregunta{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.preguntas h1{
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+}
+
+.respuestas{
+    padding: 0 2rem;
+}
+
+.respuestas p{
+    color: black;
+}
+
+.respuesta{
+    background-color: yellow;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    /* max-width: 55rem; */
+}
+
+.respuesta:hover{
+    cursor: pointer;
+}
+
+
+
+
+.video{
+    
+    margin-top: 2rem;
+    /* margin-left: 5rem; */
+    padding: 2rem;
+    max-width: 100%;
+
+}
+
+.video-1,.video-2{
+    display: none;
+}
+
+.mostrar{
+    display: flex;
+    /* align-items: center; */
+}
+
+.ocultar{
+    display: none;
+}

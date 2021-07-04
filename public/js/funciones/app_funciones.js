@@ -69,6 +69,9 @@ export const tarjetas=()=>{
 export const navegacionFija=()=>{
     const barra = document.querySelector('.header');
 
+    if(barra){
+        
+    }
     const observer = new IntersectionObserver(function(entries){
         if(entries[0].isIntersecting){
             barra.classList.remove('fijo');
@@ -214,3 +217,27 @@ export const contador=()=>{
     
 }
 
+export const preguntas=()=>{
+    const p1r1 = document.querySelector('.p1r1.respuesta');
+    const video1 = document.querySelector('.video-1');
+
+    const p1r2 = document.querySelector('.p1r2.respuesta');
+    const video2 = document.querySelector('.video-2');
+
+    if(p1r1){
+        p1r1.addEventListener('click',()=>{
+            video1.classList.add('mostrar');
+            video2.classList.remove('mostrar');
+            
+        })
+    }
+
+    if(p1r2){
+        p1r2.addEventListener('click',()=>{
+            
+            video2.classList.add('mostrar');
+            video1.classList.remove('mostrar');
+        })
+    }
+    
+}

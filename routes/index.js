@@ -6,7 +6,7 @@ const router = express.Router();
 
 const principalController = require('../controllers/principalController');
 const anonimoController = require('../controllers/anonimoController');
-
+const plataformaController = require('../controllers/plataformaInteractiva');
 const authController = require('../controllers/authController');
 
 
@@ -58,6 +58,16 @@ module.exports=function(){
 
     router.get('/cv-anonimo/cerrar-sesion',authController.cerrarSesion);
 
+    router.get('/cv-anonimo/usuarios-cv',anonimoController.mostrar_cv);
+
+    //-----------------PLATAFORMA INTERACTIVA--------------------------//
+
+    router.get('/plataforma-interactiva',plataformaController.home_plataforma);
+
+    router.get('/plataforma-interactiva/preguntas',plataformaController.plataforma_preguntas);
+
     return router;
+
+    
 }
 
