@@ -1,0 +1,59 @@
+extends layout-networking
+
+block contenido 
+    section.seccion-networking
+        .contenedor 
+            .contenido-principal-networking
+                .texto-principal-networking
+                    h1 !Encuentra los mejores eventos en #[span EEMU]¡
+                    p En EEMU encontrarás los mejores eventos, charlas y capacitaciones relacionados sobre el empoderamiento económico de la mujer
+                
+                .imagen-emu 
+                    img(src="/img/networking-imagen.jpg", alt="")
+    
+    main.principal-networking 
+        .banner-principal 
+            .contenedor
+                .contenido-banner 
+                    h1.titulo-banner Temas Centrales
+
+                    .temas-centrales 
+                        .tema-central 
+                            h1 Cultura Machista 
+                            a.boton-evento(href="/networking/eventos") Ver Eventos 
+                        .tema-central 
+                            h1 Gestión Pública 
+                            a.boton-evento(href="/networking/eventos") Ver eventos 
+
+                    .todos-eventos
+                        a.boton-evento(href="/networking/eventos") Todos los Eventos
+
+    section.seccion-uso 
+        .contenedor 
+            .uso
+                .titulo-uso 
+                    h3 Uso de la Plataforma
+                .texto-uso
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus officiis est dicta nostrum sapiente maiores exercitationem similique incidunt, mollitia corporis laboriosam rerum perspiciatis quaerat qui ducimus veritatis obcaecati? Sunt, placeat.
+
+                .pasos
+                    .pasos-display
+                        .titulo-pasos 
+                            h4 Pasos
+                        .paso
+                            
+                            p.texto-paso #[span 1]    Busca un evento sobre gestión pública o cultura machista relacionado con empodermiento económico de la mujer
+                        .paso
+                            
+                            p.texto-paso #[span 2]    Registrate al evento
+                        .paso
+                            
+                            p.texto-paso #[span 3]    En el caso de eventos de gestión pública debes completar un formulario para que se te recomiende eventos relacionados a ese tema
+                        .paso
+                            
+                           
+                    
+                .boton-pasos 
+                    .boton-desplegable
+                        i(class="fas fa-chevron-down")   
+

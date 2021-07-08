@@ -9,6 +9,8 @@ const anonimoController = require('../controllers/anonimoController');
 const plataformaController = require('../controllers/plataformaInteractiva');
 const authController = require('../controllers/authController');
 
+const networkingController = require('../controllers/networkingController');
+
 
 
 module.exports=function(){
@@ -66,7 +68,17 @@ module.exports=function(){
 
     router.get('/plataforma-interactiva/preguntas',plataformaController.plataforma_preguntas);
 
+     //-------------------NETWORKING--------------------------//
+
+     router.get('/networking',networkingController.home_networking);
+
+     router.get('/networking/nosotros',networkingController.nosotros_networking);
+
+     router.get('/networking/eventos',networkingController.eventos_networking);
+
     return router;
+
+   
 
     
 }

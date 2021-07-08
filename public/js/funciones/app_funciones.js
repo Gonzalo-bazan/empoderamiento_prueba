@@ -363,3 +363,39 @@ export const preguntas=()=>{
     }
     
 }
+
+
+export const mobileMenuNetworking=()=>{
+    const ham = document.querySelector('.ham-networking');
+    const nav1 = document.querySelector('.barra-navegacion');
+    const barras = document.querySelectorAll('.ham-networking span');
+    const body = document.querySelector('body');
+
+    if(ham){
+        ham.addEventListener('click',()=>{
+            nav1.classList.toggle('activado');
+            
+            barras.forEach(child=>{child.classList.toggle('animado')});
+            body.classList.toggle('hidden');
+        })
+    }
+}
+
+export const inscribirse=()=>{
+    const inscribirse = document.querySelectorAll('.evento-inscribirse');
+
+    if(inscribirse){
+        
+        inscribirse.forEach((item)=>{
+            item.addEventListener('click',()=>{
+                Swal.fire(
+                    'Enhorabuena!',
+                    'Te has inscrito al evento!',
+                    'success'
+                  )
+            })
+        })
+        
+        
+    }
+}

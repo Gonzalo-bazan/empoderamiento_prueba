@@ -566,6 +566,7 @@ img{
     padding: 2rem;
     grid-row-start: 2;
     grid-row-end: 3;
+    line-height: 2.2rem;
 }
 
 .texto-producto p{

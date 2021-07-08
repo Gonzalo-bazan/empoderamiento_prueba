@@ -18,6 +18,10 @@ import { contador } from "./funciones/app_funciones";
 
 import { preguntas } from "./funciones/app_funciones";
 
+import { mobileMenuNetworking } from "./funciones/app_funciones";
+
+import { inscribirse } from "./funciones/app_funciones";
+
 
 
    
@@ -34,6 +38,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     irAbajo();
     desplegarPasos();
     contador();
+    mobileMenuNetworking();
+    inscribirse();
     
     
 

@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        include partials/header-networking
+    body
+        header.header
+            .barra  
+                .contenedor
+                    .barra-header
+                        a.logo(href="/networking") EEMU
+
+                        .navegacion
+                            ul.barra-navegacion
+                                li.item-navegacion
+                                    a(href="/networking") Inicio
+                                li.item-navegacion
+                                    a(href="/networking/nosotros") Nosotros
+                                li.item-navegacion
+                                    a(href="/networking/eventos") Eventos
+                        button.ham-networking(type="button")
+                            span.br-1-cv
+                            span.br-2-cv
+                            span.br-3-cv  
+        block contenido
+
+        footer.footer
+            p.texto-footer.contenedor &copy; EEMU               
+                         
+
+
+                    
+        
+
