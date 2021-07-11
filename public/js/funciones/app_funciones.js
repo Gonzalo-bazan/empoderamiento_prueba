@@ -236,6 +236,23 @@ export const preguntas=()=>{
     const video4 = document.querySelector('.video-4');
     const rpta2 = document.querySelector('.rpta-2');
 
+    //PREGUNTA 3
+
+    const pregunta3 = document.querySelector('.pregunta-3');
+    const p3r1 = document.querySelector('.p3r1.respuesta');
+    const video5 = document.querySelector('.video-5');
+    const p3r2 = document.querySelector('.p3r2.respuesta');
+    const video6 = document.querySelector('.video-6');
+    const rpta3 = document.querySelector('.rpta-3');
+
+    //Finalizar
+
+    const botonFinalizar = document.querySelector('.boton-finalizar');
+    const puntajeFinal = document.querySelector('.puntaje-final');
+
+    const puntajeNumeros = document.querySelector('.puntaje-final span')
+
+
     const puntos = document.querySelector('.puntuacion');
 
     let puntaje=0;
@@ -314,6 +331,7 @@ export const preguntas=()=>{
             p2r1.classList.add('ocultar');
             p2r2.classList.add('ocultar');
             pregunta1.classList.add('ocultar');
+            pregunta3.classList.add('mostrar');
             
 
             rpta2.classList.add('mostrar');
@@ -343,6 +361,7 @@ export const preguntas=()=>{
             p2r1.classList.add('ocultar');
             p2r2.classList.add('ocultar');
             pregunta1.classList.add('ocultar');
+            pregunta3.classList.add('mostrar');
 
             rpta2.classList.add('mostrar');
             rpta2.textContent = p2r2.textContent;
@@ -360,6 +379,74 @@ export const preguntas=()=>{
             },duracion);
 
         })
+    }
+
+    if(p3r1){
+        p3r1.addEventListener('click',()=>{
+            
+          
+            video5.classList.add('mostrar');
+            p3r1.classList.add('ocultar');
+            p3r2.classList.add('ocultar');
+            pregunta2.classList.add('ocultar');
+            botonFinalizar.classList.add('mostrar-boton');
+
+            rpta3.classList.add('mostrar');
+            rpta3.textContent = p3r1.textContent;
+
+            puntajeAnterior = puntaje + 10;
+
+            let tiempo = setInterval(()=>{
+                // añadirPuntos=11
+                // puntajeAnterior = puntaje + 11
+                puntos.textContent = puntaje;
+                puntaje +=1;
+                if(puntaje===puntajeAnterior){
+                    clearInterval(tiempo)
+                }
+            },duracion);
+
+        })
+    }
+
+    if(p3r2){
+        p3r2.addEventListener('click',()=>{
+            
+          
+            video6.classList.add('mostrar');
+            p3r1.classList.add('ocultar');
+            p3r2.classList.add('ocultar');
+            pregunta2.classList.add('ocultar');
+            botonFinalizar.classList.add('mostrar-boton');
+
+            rpta3.classList.add('mostrar');
+            rpta3.textContent = p3r2.textContent;
+
+            puntajeAnterior = puntaje + 5;
+
+            let tiempo = setInterval(()=>{
+                // añadirPuntos=11
+                // puntajeAnterior = puntaje + 11
+                puntos.textContent = puntaje;
+                puntaje +=1;
+                if(puntaje===puntajeAnterior){
+                    clearInterval(tiempo)
+                }
+            },duracion);
+
+        })
+    }
+
+    if(botonFinalizar){
+
+        botonFinalizar.addEventListener('click',()=>{
+            
+            pregunta3.classList.add('ocultar');
+            puntajeFinal.classList.add('mostrar-boton');
+            puntajeNumeros.textContent = puntaje-1;
+            botonFinalizar.classList.add('ocultar');
+        })
+        
     }
     
 }
