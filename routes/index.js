@@ -76,6 +76,10 @@ module.exports=function(){
 
      router.get('/networking/eventos',networkingController.eventos_networking);
 
+     router.get('/networking/eventos-gestion',networkingController.gestion_networking);
+
+     router.get('/networking/formulario',networkingController.gestion_formulario);
+
     return router;
 
    

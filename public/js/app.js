@@ -22,6 +22,8 @@ import { mobileMenuNetworking } from "./funciones/app_funciones";
 
 import { inscribirse } from "./funciones/app_funciones";
 
+import { eventosGestion } from "./funciones/app_funciones";
+
 
 
    
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     contador();
     mobileMenuNetworking();
     inscribirse();
+    eventosGestion();
     
     
 

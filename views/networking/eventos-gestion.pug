@@ -1,0 +1,16 @@
+extends ../layout-networking
+
+block contenido
+    main.principal-gestion 
+        .contenedor 
+            .instrucciones-gestion.contenedor
+                .elementos-gestion.contenedor
+                    h1.titulo-instruccion Instrucciones
+                    p.parrafo-instruccion Este Test o Formulario esta dirigido especialmente para trabajadores del Ministerio de Trabajo y el Ministerio de la Mujer. Con la finalidad de generar una base de datos de ambas instituciones y que las personas que rellenen este test o formulario puedan encontrar espacios donde conversar y aprender sobre temas ligados al empoderamiento económico de la mujer.
+                    h1.pasos-instruccion Pasos a Seguir
+                        .instrucciones 
+                            p.item-instruccion #[span 1.] LLena el formulario o test para poder recomendarte algun evento en temas de gestión publica y empoderamiento económico de la mujer.
+                            p.item-instruccion #[span 2.] Envía el formulario o test. Los eventos que se mostrarán, va depender de lo que llenes en el formulario.
+                            p.item-instruccion #[span 3.] Inscríbete en los eventos que te salgan recomendados.
+                    .boton-eventos-gestion 
+                        a(href="/networking/formulario") Iniciar Test 

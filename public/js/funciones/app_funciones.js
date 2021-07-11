@@ -399,3 +399,35 @@ export const inscribirse=()=>{
         
     }
 }
+
+export const eventosGestion=()=>{
+    const botonEnviar = document.querySelector('.boton-enviar');
+    const ministerio = document.querySelector('.ministerio');
+    const principalEventos = document.querySelector('.principal-eventos-gestion')
+    const e1 = document.querySelector('.e-1');
+    const e2 = document.querySelector('.e-2');
+    const formulario = document.querySelector('.formulario-contenedor')
+    
+    
+
+    if(botonEnviar){
+        botonEnviar.addEventListener('click',()=>{
+            var num = Math.floor((Math.random()*2))
+            console.log(num);
+            principalEventos.classList.add('mostrar');
+            formulario.classList.add('ocultar');
+            if(num==1){
+                // alert('0')
+               e1.classList.add('ocultar');
+               e2.classList.add('mostrar')
+            }else{
+                e1.classList.add('mostrar');
+                e2.classList.add('ocultar');
+                
+            }
+
+           
+            
+        })
+    }
+}

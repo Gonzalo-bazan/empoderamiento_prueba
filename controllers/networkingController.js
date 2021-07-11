@@ -15,3 +15,15 @@ exports.eventos_networking=(req,res)=>{
         nombrePagina: 'Eventos'
     });
 }
+
+exports.gestion_networking=(req,res)=>{
+    res.render('networking/eventos-gestion',{
+        nombrePagina: 'Eventos Gestión Pública'
+    })
+}
+
+exports.gestion_formulario=(req,res)=>{
+    res.render('networking/formulario',{
+        nombrePagina: 'Formulario'
+    })
+}
